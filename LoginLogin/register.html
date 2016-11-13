@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form >
+			<input type="text" name="userName" id="userName" value="" />
+			<input type="password" name="pwd" id="pwd" value="" />
+			<input type="button" id="registerBtn" value="注册"/>
+		</form>
+	</body>
+	<script src="jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="demo.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+			var myUserName = "myUserName";
+		var myPwd = "myPwd";
+		var isLogin = "isLogin";
+		//0表示未登录,1表示登录
+	
+	$("#registerBtn").on("click",function(){
+		var userName = $("#userName").val();
+		var pwd = $("#pwd").val();
+		
+		if(userName == ""){
+			alert("用户名不能为空");
+		}else{
+			if(pwd == ""){
+				alert("密码不能为空");
+			}else{
+				register(userName,pwd);
+			}
+		}
+	});
+	function register(userName,pwd){
+	
+		if(getCookie(myUserName) == userName){
+			alert("此用户已经注册，请直接登录")
+		}else{
+			addCookie(myUserName,userName,5);
+			addCookie(myPwd,pwd,5);
+			addCookie(isLogin,"0",5);
+		}
+	}
+	
+	</script>
+</html>

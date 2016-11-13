@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form >
+			<input type="text" name="userName" id="userName" value="" />
+			<input type="password" name="pwd" id="pwd" value="" />
+			<input type="button" id="loginBtn" value="登录"/>
+		</form>
+	</body>
+	<script src="jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="demo.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+			var myUserName = "myUserName";
+		var myPwd = "myPwd";
+	var isLogin = "isLogin";
+	
+	
+	
+	$("#loginBtn").on("click",function(){
+			var userName = $("#userName").val();
+		var pwd = $("#pwd").val();
+		if(userName == ""){
+			alert("用户名不能为空");
+		}else{
+			if(pwd == ""){
+				alert("密码不能为空");
+			}else{
+				login(userName,pwd);
+			}
+		}
+	});
+	
+	
+	function login(userName,pwd){
+		var myUserName = "myUserName";
+		var myPwd = "myPwd";
+		if(getCookie(myUserName) != userName){
+			alert("此用户不存在")
+		}else{
+			if(getCookie(myPwd) != pwd){
+				alert("密码不正确")
+			}else{
+				updateCookie(isLogin,"1");
+				window.location = "index.html";
+			}
+		}
+	}
+	</script>
+</html>

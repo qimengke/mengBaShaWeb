@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="useInfo">
+
+		</div>
+
+		<div id="userPwd" style="display: none;">
+			<input type="password" name="oldPwd" id="oldPwd" value="" />
+			<input type="password" name="newPwd" id="newPwd" value="" />
+			<input type="button" name="updataeBtn" id="updataeBtn" value="修改密码" />
+		</div>
+	</body>
+	<script src="jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="demo.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var myUserName = "myUserName";
+		var myPwd = "myPwd"
+		var isLogin = "isLogin";
+		//alert(getCookie(isLogin));
+		if(getCookie(isLogin) == 1){
+			var userName = getCookie(myUserName);
+			$("#useInfo").html('欢迎您,' + userName + '|<a href="javascript:void(0)" id="cancel">退出</a>');
+			$("#userPwd").show();
+		}else{
+			$("#useInfo").html('<a href="login.html">登录</a>|<a href="register.html">注册</a>');
+			$("#{userPwd").hide();
+		}
+		/*if (checkCookie(myUserName)) {
+			var userName = getCookie(myUserName);
+			$("#useInfo").html('欢迎您,' + userName + '|<a href="javascript:void(0)">退出</a>');
+			$("#userPwd").show();
+		} else {
+			$("#useInfo").html('<a href="login.html">登录</a>|<a href="register.html">注册</a>');
+			$("#{userPwd").hide();
+		}*/
+		
+		$("#cancel").on("click",function(){
+			if(getCookie(isLogin) == 1){
+				updateCookie(isLogin,"0");
+				window.location = "index.html"
+			}
+		})
+		
+		$("#updataeBtn").on("click",function(){
+			var oldPwd = $("#oldPwd").val();
+			var newPwd = $("#newPwd").val();
+			
+			if(oldPwd==""){
+				alert("旧密码不能为空")
+			}else{
+				if(getCookie(myPwd) != oldPwd){
+					alert("旧密码不正确")
+				}else{
+					if(newPwd==""){
+						alert("新密码不能为空")
+					}else{
+						updateCookie(myPwd,newPwd);
+					}
+				}
+			}
+		})
+		
+	</script>
+
+</html>

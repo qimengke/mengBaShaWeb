@@ -1,0 +1,304 @@
+@charset "utf-8";
+*{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+body,html{
+	width:100%;
+	background-color:white;
+}
+img,span{
+	display:block;
+}
+a{
+	text-decoration: none;
+	
+}
+
+#header{
+	width:100%;
+	height:159px;
+	
+}
+
+
+/********header1 导引*******/	
+#header #header1{
+	width:100%;
+	height:26px;
+	background-color:#F6F6F6;
+	border-bottom:1px solid #EDEDED;
+	position:relative;
+	z-index:99;
+}
+
+
+#header #header1 #origin{
+	width:1200px;
+	height:100%;
+	margin:0 auto;
+}
+#header #header1 #origin img{
+	float:left;
+}
+#header #header1 #origin ul{
+	float:right;
+	height:100%;
+	margin-right:30px;
+	
+}
+#header #header1 #origin ul li.origin{
+	float:left;
+	height:26px;
+	text-align:center;
+	margin-left:8px;
+	
+}
+#header #header1 #origin ul li.saoMa1{
+	
+	margin-left:20px;
+	display:none;
+	
+	
+}
+#header #header1 #origin ul li.saoMa2{
+	
+	margin-left:60px;
+	display:none;
+}
+#header #header1 #origin ul li.saoMa3{
+	margin-left:100px;
+	display:none;
+	
+}
+#header #header1 #origin ul li.saoMa4{
+	margin-left:220px;
+	margin-top:25px;
+	width:200px;
+	height:120px;
+	font-size:12px;
+	line-height:120px;
+	text-align:center;
+	background-color:white;
+	color:black;
+	border:1px solid #EDEDED;
+	display:none;
+	
+}
+
+	
+	
+
+#header #header1 #origin ul li a{
+		
+	font-size:11px;
+	width:100%;
+	line-height:26px;
+	color:#666666;
+	text-decoration:none;
+}
+#header #header1 #origin ul li a:hover{
+	color:darkred;
+}
+#header #header1 #origin ul li p{
+	display:inline;
+
+	font-size:11px;
+	color:#D4D4D4;
+}
+/********header1 导引*******/	
+
+/********header2 头*******/	
+#header2{
+	width:100%;
+	height:132px;
+	background-color:white;
+}
+#header2 #inputKua{
+	width:1200px;
+	height:103px;
+	margin:0 auto;
+}
+#header2 #inputKua #mengPic{
+	float:left;
+	
+} 
+#header2 #inputKua #jinDu{
+	width:620px;
+	height:53px;
+	float:right;
+	padding-top:50px;
+}
+
+
+/*******header结束*******/
+
+
+/*********内容区************/
+
+#contentOut{
+	width:1200px;
+	height:400px;
+	border:1px solid #CCCCCC;
+	margin:0px auto;
+
+}
+#contentOut .pp{
+	width:1200px;
+	height:180px;
+	
+	padding-top:20px;
+}
+#contentOut .pp ul{
+	width:844px;
+	height:170px;
+	margin:0 auto;
+	
+}
+#contentOut .pp ul li{
+	height:22px;
+	font-size:14px;
+	line-height:20px;
+	margin-bottom:6px;
+}
+#contentOut .pp ul li img,p,span{
+	display:inline;
+}
+#contentOut .pp ul li img{
+	height:22px;
+	vertical-align: middle;
+}
+#contentOut .pp ul li span{
+	color:red;
+}
+#contentOut .pic{
+	width:884px;
+	height:149px;
+	margin:0 auto;
+}
+#contentOut .pic img{
+	display:block;
+}
+/*********内容区************/
+
+
+
+
+
+
+#footer{
+	height:454px;
+	background-color:blue;
+}
+#footer .foot1{
+	width:100%;
+	height:144px;
+	background-color:#ECECEC;
+	
+}
+#footer .foot1 .content{
+	width:1200px;
+	height:144px;
+	margin:0 auto;
+	overflow:hidden;
+}
+#footer .foot1 .content ul{
+	float:left;
+	margin:20px 40px;
+	height:144px;
+}
+#footer .foot1 .content ul li{
+	
+	
+	margin-top:5px;
+}
+#footer .foot1 .content ul li a{
+	display:block;
+	font-size:6px;
+	color:#7F7F7F;
+	font-weight:500;
+}
+#footer .foot1 .content ul li.first a{
+	color:black;
+	font-weight:600;
+}
+#footer .foot2{
+	width:100%;
+	height:310px;
+	background-color:white;
+	
+	
+}
+#footer .foot2 .content1{
+	width:840px;
+	height:230px;
+	margin:0 auto;
+	
+}
+#footer .foot2 .content1 ul.one{
+	height:32px;
+	padding-top:10px ;
+}
+#footer .foot2 .content1 ul.one li{
+	float:left;
+}
+#footer .foot2 .content1 ul.two {
+	height:12px;
+	
+	width:495px;
+	margin:0 auto;
+	margin-top:40px;
+	
+}
+#footer .foot2 .content1 ul.two li{
+	float:left;
+	
+}
+#footer .foot2 .content1 ul.two li a{
+	font-size:12px;
+	margin:0 5px;
+	color:#999999;
+}
+#footer .foot2 .content1 p {
+	height:12px;
+	font-size:12px;
+	color:#999999;
+	width:587px;
+	margin:0 auto;
+	margin-top:20px;
+	
+}
+#footer .foot2 .content1 ul.three{
+	width:690px;
+	height:36px;
+	margin:0 auto;
+	margin-top:15px;
+}
+#footer .foot2 .content1 ul.three li{
+	float:left;
+	height:31px;
+	margin:0 2px;
+	
+}
+#footer .foot2 .content1 ul.three li img{
+	height:100%;
+}
+
+
+#footer .link{
+	line-height:30px;
+	width:1200px;
+	height:30px;
+	margin:0 auto;
+	margin-top:30px;
+	border-top:1px dashed #CCCCCC;
+	border-bottom:1px dashed #CCCCCC;
+	font-size:12px;
+}
+#footer .link a{
+	color:#999999;
+}
+#footer .link a:hover{
+	color:red;
+}

@@ -1,0 +1,89 @@
+@charset "utf-8";
+*{padding: 0;margin: 0;}
+ul,li{
+	list-style: none;
+}
+img{
+	display: block;
+}
+.bannerBox{
+	width: 100%;
+	height:360px;
+	position: relative;
+	overflow: hidden;
+}
+.bannerList{
+	width:100%;
+	height:100%;
+	position: relative;
+	z-index: 100;
+}
+.bannerList li{
+	position: absolute;
+	width: 100%;
+}
+.bannerList li a.bannerImg{
+	display: block;
+}
+.bannerList li a.bannerImg img{
+	width:100%;
+	height:360px;
+}
+.bannerList li .bannerText{
+	position: absolute;
+	left: 45%;
+	top:50px;
+	color: #000;
+}
+.controlBtn{
+	position: absolute;
+	top:50%;
+	z-index: 999;
+	width: 80px;
+	height:80px;
+	margin-top: -40px;
+	background-image: url(../img/focus_handle.png);
+}
+#prevBtn{
+	background-position: 0px 0px;
+	left:15px;
+}
+#prevBtn:hover{
+	background-position: 0px -80px;
+}
+#nextBtn{
+	background-position: -80px 0;
+	right:15px;
+}
+#nextBtn:hover{
+	background-position: -80px -80px;
+}
+
+.bubble{
+	position: absolute;
+	left:45%;
+	bottom:10px;
+	z-index: 999;
+}
+.bubble li {
+	float: left;
+	width: 10px;
+	height:10px;
+	background-color: #fff;
+	margin: 0 5px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.bubble li.active{
+	background-color: #f66;
+}
+#banner2{
+	width:300px;
+	height:200px;
+}
+#banner3{
+	width:800px;
+	height:200px;
+}
